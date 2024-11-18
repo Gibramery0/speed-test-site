@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hız Testi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Hız Testi</h1>
+        <p>İnternet bağlantınızın hızını test etmek için aşağıdaki butona tıklayın.</p>
+        <button id="startTest" class="btn" onclick="startSpeedTest()">Testi Başlat</button>
+
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Lütfen bekleyin...</p>
+        </div>
+
+        <div id="result" class="result">
+            <p><strong>İndirme Hızı:</strong> <span id="downloadSpeed">--</span></p>
+            <p><strong>Yükleme Hızı:</strong> <span id="uploadSpeed">--</span></p>
+            <p><strong>Ping:</strong> <span id="ping">--</span></p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
